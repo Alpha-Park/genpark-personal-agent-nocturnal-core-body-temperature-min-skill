@@ -1,0 +1,23 @@
+{
+  "name": "genpark-personal-agent-nocturnal-core-body-temperature-min-skill",
+  "version": "1.0.0",
+  "description": "Models circadian core body temperature rhythm, calculates T_min nadir timing and amplitude, and prescribes evening AVA vasodilation heat-dump protocols.",
+  "tools": [
+    {
+      "name": "model_circadian_temperature_curve",
+      "description": "Calculates circadian temperature nadir (T_min) timing, rhythm amplitude, and PRC inflection boundaries.",
+      "parameters": {
+        "habitual_wake_time_24h": "float (default 7.0)",
+        "evening_peak_cbt_celsius": "float (default 37.2)",
+        "nocturnal_nadir_cbt_celsius": "float (default 36.3)"
+      }
+    },
+    {
+      "name": "prescribe_distal_heat_dump_protocol",
+      "description": "Prescribes evening warm immersion window and ambient cooling to accelerate CBT decline.",
+      "parameters": {
+        "target_bedtime_24h": "float (default 23.0)"
+      }
+    }
+  ]
+}
